@@ -1,0 +1,40 @@
+{
+  "name": "mi-curriculo-web",
+  "version": "1.0.0",
+  "description": "Curriculo web personal sobre mis proyectos de desarrollo.",
+  "main": "n/a",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "nodemon ./app/server.js",
+    "start": "node ./app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gene-112511/mi-curriculo-web.git"
+  },
+  "keywords": [
+    "cv",
+    "curriculum",
+    "web-cv",
+    "web-portfolio"
+  ],
+  "author": "Genesis Trias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gene-112511/mi-curriculo-web/issues"
+  },
+  "homepage": "https://github.com/gene-112511/mi-curriculo-web#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.3",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
