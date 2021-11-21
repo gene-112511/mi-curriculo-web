@@ -2,9 +2,8 @@
 
 const { createServer } = require("http");
 const { join } = require("path");
-require("dotenv").config({ path: join(__dirname, "..", ".env") });
 
-const isProduction = process.env.NODE_ENV === "production" ? true : false; 
+const isProduction = process.env.NODE_ENV === "production"; 
 const PORT = isProduction ? process.env.PORT : 8000;
 
 const app = isProduction
@@ -14,5 +13,5 @@ const app = isProduction
 const server = createServer(app);
 
 server.listen(...isProduction ? [ PORT ] : [ PORT, () => {
-  console.log(`Server running at: 'http://localhost:${PORT}`)
+  console.log(`Server running at: 'http://localhost:${PORT}'`);
 }]);
