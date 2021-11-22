@@ -1,9 +1,9 @@
 "use strict";
 
 const express = require("express");
-const { join, resolve } = require("path");
+const { join } = require("path");
 
-const PUBLIC_DIR = join(".", "..", "public");
+const PUBLIC_DIR = join(__dirname, "..", "public");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
