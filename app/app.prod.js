@@ -3,7 +3,7 @@
 const express = require("express");
 const { join, resolve } = require("path");
 
-const PUBLIC_DIR = resolve(".", "..", "public");
+const PUBLIC_DIR = join(".", "..", "public");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
