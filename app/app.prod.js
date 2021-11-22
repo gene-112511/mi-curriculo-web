@@ -1,7 +1,7 @@
 "use strict";
 
 const express = require("express");
-const { join } = require("path");
+const { join, resolve } = require("path");
 
 const PUBLIC_DIR = resolve(".", "..", "public");
 const app = express();
