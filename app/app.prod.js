@@ -4,11 +4,11 @@ const express = require("express");
 const { join } = require("path");
 const bodyParser = require("body-parser");
 const connection = require("./../config/db/connection");
-const { config: environmentConfig } = require("dotenv");
+// const { config: environmentConfig } = require("dotenv");
 
-environmentConfig({
-  path: join(__dirname, "..", ".env")
-});
+// environmentConfig({
+//   path: join(__dirname, "..", ".env")
+// });
 
 const PUBLIC_DIR = join(__dirname, "..", "public");
 const app = express();
