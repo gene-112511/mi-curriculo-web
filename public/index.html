@@ -211,41 +211,51 @@ msg-error {
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="/" method="post">
-                  
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre y apellido..." required="true" />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" placeholder="Correo..." required="true"/>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Asunto..." required="true" />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Mensaje..." required="true"></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <span class="msg-error error"></span>
-                      <fieldset>
-                       
-                        <button type="submit" class="g-recaptcha button" data-sitekey="6Lf9JQ4eAAAAACZJfP0Ta0F30BF7108QmMX7hSsc" 
-                                data-callback='onSubmit' data-action='submit' id="form-submit">
-                          Enviar mensaje
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
+               <form action="mandoMail.php" method=post name="formx">
+<table width="450px">
+<tr>
+<td valign="top">
+<label for="Nombre">Nombre</label>
+</td>
+<td valign="top">
+<input type="text" name="Nombre" maxlength="50" size="30">
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<label for="Apellido">Apellido</label>
+</td>
+<td valign="top">
+<input type="text" name="Apellido" maxlength="50" size="30">
+</td>
+</tr>
+<tr>
+<td valign="top">
+<label for="email">Email</label>
+</td>
+<td valign="top">
+<input type="text" name="email" maxlength="80" size="30">
+</td>
+
+</tr>
+<tr>
+<td valign="top">
+<label for="comentario">Comentario</label>
+</td>
+<td valign="top">
+<textarea name="comentario" maxlength="1000" cols="25" rows="6"></textarea>
+</td>
+
+</tr>
+<tr>
+<td colspan="2" style="text-align:center">
+<input type="submit" value="Enviar">
+</td>
+</tr>
+</table>
+<div class="g-recaptcha" data-sitekey="6Lf9JQ4eAAAAACZJfP0Ta0F30BF7108QmMX7hSsc"></div>
+</form>
               </div>
             </div>
           </div>
