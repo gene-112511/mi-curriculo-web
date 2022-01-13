@@ -7,6 +7,7 @@
     <meta name="author" content="" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
     <title>Curriculum Vitae - Génesis Trias</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -200,7 +201,8 @@
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="/" method="post">
+                <form id="contact" action="mandoMail.php" method="post">
+                  
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
@@ -227,6 +229,7 @@
                         <button type="submit" id="form-submit" class="button">
                           Enviar mensaje
                         </button>
+                        <div class="g-recaptcha" data-sitekey="6Lf9JQ4eAAAAACZJfP0Ta0F30BF7108QmMX7hSsc"></div>
                       </fieldset>
                     </div>
                   </div>
