@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Como poner o integrar reCAPTCHA en HTML</title>
+<!-- ESTE ES EL CODIGO CSS -->
+<style>
+msg-error {
+  color: #c65848;
+}
+.g-recaptcha.error {
+  border: solid 2px #c64848;
+  padding: .2em;
+  width: 19em;
+}
+</style>
+<!-- FIN CODIGO CSS -->
+
+
+  </head>
+  <body>
+    <form action="" method="post">
+      <label for="name">Nombre:</label>
+      <input name="name" required><br />
+      <label for="email">Email:</label>
+      <input name="email" type="email" required><br />
+      <span class="msg-error error"></span>
+<div id="recaptcha" class="g-recaptcha" data-sitekey="6Lf9JQ4eAAAAACZJfP0Ta0F30BF7108QmMX7hSsc"></div>
+      <input type="submit" value="Submit" />
+    </form>
+    <!--js-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript">
+$( '#btn-validate' ).click(function(){
+  var $captcha = $( '#recaptcha' ),
+      response = grecaptcha.getResponse();
+    if (response.length === 0) {
+    $( '.msg-error').text( "reCAPTCHA is mandatory" );
+    if( !$captcha.hasClass( "error" ) ){
+      $captcha.addClass( "error" );
+    }
+  } else {
+    $( '.msg-error' ).text('');
+    $captcha.removeClass( "error" );
+    alert( 'reCAPTCHA marked' );
+  }
+})
+</script>
+  </body>
+</html>
+
+       
