@@ -257,7 +257,30 @@ msg-error {
     </div>
     <!--js--> 
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+     <script>
+   function onSubmit(token) {
+     document.getElementById("form-submit").submit();
+   }
+ </script>
     
+ 
+<script type="text/javascript">
+$( '#btn-validate' ).click(function(){
+  var $captcha = $( '#recaptcha' ),
+      response = grecaptcha.getResponse();
+    if (response.length === 0) {
+    $( '.msg-error').text( "reCAPTCHA is mandatory" );
+    if( !$captcha.hasClass( "error" ) ){
+      $captcha.addClass( "error" );
+    }
+  } else {
+    $( '.msg-error' ).text('');
+    $captcha.removeClass( "error" );
+    alert( 'reCAPTCHA marked' );
+  }
+})
+</script>
     
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
