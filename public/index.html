@@ -7,7 +7,17 @@
     <meta name="author" content="" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
     <title>Curriculum Vitae - Génesis Trias</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- ESTE ES EL CODIGO CSS -->
+<style>
+msg-error {
+  color: #c65848;
+}
+.g-recaptcha.error {
+  border: solid 2px #c64848;
+  padding: .2em;
+  width: 19em;
+}
+</style>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -243,7 +253,26 @@
 
 
     </div>
-
+    <!--js-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript">
+$( '#btn-validate' ).click(function(){
+  var $captcha = $( '#recaptcha' ),
+      response = grecaptcha.getResponse();
+    if (response.length === 0) {
+    $( '.msg-error').text( "reCAPTCHA is mandatory" );
+    if( !$captcha.hasClass( "error" ) ){
+      $captcha.addClass( "error" );
+    }
+  } else {
+    $( '.msg-error' ).text('');
+    $captcha.removeClass( "error" );
+    alert( 'reCAPTCHA marked' );
+  }
+})
+</script>
+    
+    
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
